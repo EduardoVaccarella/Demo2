@@ -59,7 +59,7 @@
 <style lang="scss" scoped>
 
     .ms-box-shadow {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
     }
 
     span {
@@ -80,13 +80,15 @@
     }
 
     span:hover {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
     }
 
     #hidden-menu {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
         width: 200px;
         border-radius: 10px;
+        position: fixed;
+        top: 75px;
 
         a {
             padding-left: 20px;

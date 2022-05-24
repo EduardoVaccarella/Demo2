@@ -1,5 +1,5 @@
 @extends('layouts.app')
  
 @section('content')
-    <pill-component></pill-component>
+    <navbar-component></navbar-component>
 @endsection
