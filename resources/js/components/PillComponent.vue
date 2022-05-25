@@ -89,6 +89,7 @@
         border-radius: 10px;
         position: fixed;
         top: 75px;
+        background-color: white;
 
         a {
             padding-left: 20px;
