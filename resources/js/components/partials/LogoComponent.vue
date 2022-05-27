@@ -13,10 +13,10 @@
 <style lang="scss" scoped>
     a {
         height: 44px;
+        width: 44px;
 
         img {
-            max-width: 100%;
-            max-height: 100%;
+            height: 100%;
         }
     }
 </style>

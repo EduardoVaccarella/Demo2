@@ -7,7 +7,7 @@
             </span>
         </div>
 
-        <div v-show="value1" id="hidden-menu">
+        <div id="hidden-menu" class="ms-hidden">
             <div class="d-flex justify-content-start flex-column align-items-evenly py-3">
                 <a href="">
                     Registrati
@@ -28,30 +28,19 @@
 
 <script>
     export default {
-        data() {
-            return {
-                value1: false
-            }
-        },
         methods: {
             showMenu() {
-                this.value1 = !this.value1;
-                if (this.value1 == true) {
-                    document.getElementById("msPill").classList.add("ms-box-shadow");
-                } else {
-                    document.getElementById("msPill").classList.remove("ms-box-shadow");
-                }
+                document.getElementById('hidden-menu').classList.toggle('ms-hidden');
+                document.getElementById("msPill").classList.toggle("ms-box-shadow");
             }
         },
         mounted() {
-            document.addEventListener('click', function handleClickOutsideMenu(event) {
-                    let hiddenMenu = document.getElementById('hidden-menu');
-
-                    if (!hiddenMenu.contains(event.target)) {
-                        this.value1 = false;
-                        console.log(this.value1);
+                document.onclick = function(e) {
+                    if(e.target.id !== 'hidden-menu' && e.target.id !== 'msPill') {
+                        hiddenMenu.classList.add('ms-hidden');
+                        pillButton.classList.remove("ms-box-shadow");
                     }
-                });
+                }
             }
         }
 </script>
@@ -60,6 +49,10 @@
 
     .ms-box-shadow {
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .ms-hidden {
+        display: none;
     }
 
     span {
