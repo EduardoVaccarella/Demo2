@@ -21,9 +21,15 @@
 </head>
 <body>
     <div id="app">
+        <nav>
+            @yield('navbar')
+        </nav>
         <main>
-            @yield('content')
+            @yield('main')
         </main>
+        <footer>
+            @yield('footer')
+        </footer>
     </div>
 </body>
 </html>

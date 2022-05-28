@@ -7,18 +7,18 @@
             </span>
         </div>
 
-        <div id="hidden-menu" class="ms-hidden">
-            <div class="d-flex justify-content-start flex-column align-items-evenly py-3">
-                <a href="">
+        <div id="hidden-menu" class="ms-hidden py-3">
+            <div class="d-flex justify-content-start flex-column align-items-evenly ms-link">
+                <a href="" class="ms-link">
                     Registrati
                 </a>
-                <a href="">
+                <a href="" class="ms-link">
                     Login
                 </a>
-                <span>
+                <span class="ms-link">
 
                 </span>
-                <a href="">
+                <a href="" class="ms-link">
                     Diventa un host
                 </a>
             </div>
@@ -36,7 +36,10 @@
         },
         mounted() {
                 document.onclick = function(e) {
-                    if(e.target.id !== 'hidden-menu' && e.target.id !== 'msPill') {
+                    let hiddenMenu = document.getElementById('hidden-menu');
+                    let pillButton = document.getElementById("msPill");
+
+                    if(e.target.id !== 'hidden-menu' && e.target.id !== 'msPill' && e.target.className !== 'ms-link') {
                         hiddenMenu.classList.add('ms-hidden');
                         pillButton.classList.remove("ms-box-shadow");
                     }
@@ -65,10 +68,14 @@
         
         .fa-bars {
             font-size: 16px;
+            position: relative;
+            z-index: -1;
         }
 
         .fa-circle-user {
             font-size: 30px;
+            position: relative;
+            z-index: -1;
         }
     }
 

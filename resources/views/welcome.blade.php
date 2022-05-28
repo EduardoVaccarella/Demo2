@@ -1,5 +1,13 @@
 @extends('layouts.app')
  
-@section('content')
+@section('navbar')
     <navbar-component></navbar-component>
+@endsection
+
+@section('main')
+    <messages-component></messages-component>
+@endsection
+
+@section('footer')
+    footer
 @endsection
