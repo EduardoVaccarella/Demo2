@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('navbar-component', require('./components/navbarComponent.vue').default);
 Vue.component('messages-component', require('./components/messagesComponent.vue').default);
 Vue.component('loggednavbar-component', require('./components/loggednavbarComponent.vue').default);
+Vue.component('addbutton-component', require('./components/partials/addbuttonComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

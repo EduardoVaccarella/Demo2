@@ -9,5 +9,6 @@
 @endsection
 
 @section('footer')
-    <loggednavbar-component></loggednavbar-component>
+    {{-- <loggednavbar-component></loggednavbar-component> --}}
+    <addbutton-component></addbutton-component>
 @endsection
