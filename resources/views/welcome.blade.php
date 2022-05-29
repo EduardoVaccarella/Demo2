@@ -1,13 +1,13 @@
 @extends('layouts.app')
  
 @section('navbar')
-    <navbar-component></navbar-component>
+    {{-- <navbar-component></navbar-component> --}}
 @endsection
 
 @section('main')
-    <messages-component></messages-component>
+    {{-- <messages-component></messages-component> --}}
 @endsection
 
 @section('footer')
-    footer
+    <loggednavbar-component></loggednavbar-component>
 @endsection

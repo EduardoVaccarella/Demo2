@@ -25,14 +25,22 @@
             }
         },
         mounted() {
-            document.querySelector('p').onclick = function() {
-                this.style.height = 'auto';
+            let paragraphs = document.querySelectorAll("p");
+
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].onclick = function() {
+                    this.classList.toggle('ms-active-height');
+                }
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+
+    .ms-active-height {
+        height: auto !important;
+    }
 
     ::-webkit-scrollbar {
         width: 10px;
@@ -82,7 +90,7 @@
 
         #ms-gradient {
             height: 100%;
-            width: 100px;
+            width: 50px;
             position: absolute;
             top: 0;
             right: 0;

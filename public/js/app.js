@@ -1899,6 +1899,41 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loggednavbarComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/loggednavbarComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _partials_LogoComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/LogoComponent.vue */ "./resources/js/components/partials/LogoComponent.vue");
+/* harmony import */ var _partials_LoggedpillComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./partials/LoggedpillComponent.vue */ "./resources/js/components/partials/LoggedpillComponent.vue");
+/* harmony import */ var _partials_SearchbarComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./partials/SearchbarComponent.vue */ "./resources/js/components/partials/SearchbarComponent.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    LoggedpillComponent: _partials_LoggedpillComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    LogoComponent: _partials_LogoComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    SearchbarComponent: _partials_SearchbarComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/messagesComponent.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/messagesComponent.vue?vue&type=script&lang=js& ***!
@@ -1934,9 +1969,13 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    document.querySelector('p').onclick = function () {
-      this.style.height = 'auto';
-    };
+    var paragraphs = document.querySelectorAll("p");
+
+    for (var i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].onclick = function () {
+        this.classList.toggle('ms-active-height');
+      };
+    }
   }
 });
 
@@ -1972,6 +2011,65 @@ __webpack_require__.r(__webpack_exports__);
     PillComponent: _partials_PillComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     LogoComponent: _partials_LogoComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     SearchbarComponent: _partials_SearchbarComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    showMenu: function showMenu() {
+      document.getElementById('hidden-menu').classList.toggle('ms-hidden');
+      document.getElementById("msPill").classList.toggle("ms-box-shadow");
+    }
+  },
+  mounted: function mounted() {
+    document.onclick = function (e) {
+      var hiddenMenu = document.getElementById('hidden-menu');
+      var pillButton = document.getElementById("msPill");
+
+      if (e.target.id !== 'hidden-menu' && e.target.id !== 'msPill' && e.target.className !== 'ms-link') {
+        hiddenMenu.classList.add('ms-hidden');
+        pillButton.classList.remove("ms-box-shadow");
+      }
+    };
   }
 });
 
@@ -6446,6 +6544,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ms_navbar[data-v-33f1aa50] {\n  position: -webkit-sticky;\n  position: sticky;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/messagesComponent.vue?vue&type=style&index=0&id=8d750454&lang=scss&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/messagesComponent.vue?vue&type=style&index=0&id=8d750454&lang=scss&scoped=true& ***!
@@ -6458,7 +6575,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "[data-v-8d750454]::-webkit-scrollbar {\n  width: 10px;\n}\n[data-v-8d750454]::-webkit-scrollbar-track {\n  background: #f1f1f1;\n}\n[data-v-8d750454]::-webkit-scrollbar-thumb {\n  background: #C9C4BE;\n}\n.ms-messages[data-v-8d750454] {\n  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);\n  border-radius: 10px;\n  position: fixed;\n  top: 75px;\n  background-color: white;\n  width: 75%;\n  height: 500px;\n  overflow-y: scroll;\n  margin: 0 auto;\n}\n.ms-messages h3[data-v-8d750454], .ms-messages p[data-v-8d750454] {\n  border-bottom: 1px solid #C9C4BE;\n  padding-bottom: 5px;\n  margin: 6px 0px;\n}\n.ms-messages h3[data-v-8d750454] {\n  display: inline-block;\n}\n.ms-messages h4[data-v-8d750454] {\n  margin: 0;\n  margin-top: 6px;\n  cursor: pointer;\n}\n.ms-messages p[data-v-8d750454] {\n  margin: 0;\n  height: 30px;\n  overflow: hidden;\n  position: relative;\n  cursor: pointer;\n}\n.ms-messages p #ms-gradient[data-v-8d750454] {\n  height: 100%;\n  width: 100px;\n  position: absolute;\n  top: 0;\n  right: 0;\n  background-image: linear-gradient(to right, transparent, white);\n}", ""]);
+exports.push([module.i, ".ms-active-height[data-v-8d750454] {\n  height: auto !important;\n}\n[data-v-8d750454]::-webkit-scrollbar {\n  width: 10px;\n}\n[data-v-8d750454]::-webkit-scrollbar-track {\n  background: #f1f1f1;\n}\n[data-v-8d750454]::-webkit-scrollbar-thumb {\n  background: #C9C4BE;\n}\n.ms-messages[data-v-8d750454] {\n  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);\n  border-radius: 10px;\n  position: fixed;\n  top: 75px;\n  background-color: white;\n  width: 75%;\n  height: 500px;\n  overflow-y: scroll;\n  margin: 0 auto;\n}\n.ms-messages h3[data-v-8d750454], .ms-messages p[data-v-8d750454] {\n  border-bottom: 1px solid #C9C4BE;\n  padding-bottom: 5px;\n  margin: 6px 0px;\n}\n.ms-messages h3[data-v-8d750454] {\n  display: inline-block;\n}\n.ms-messages h4[data-v-8d750454] {\n  margin: 0;\n  margin-top: 6px;\n  cursor: pointer;\n}\n.ms-messages p[data-v-8d750454] {\n  margin: 0;\n  height: 30px;\n  overflow: hidden;\n  position: relative;\n  cursor: pointer;\n}\n.ms-messages p #ms-gradient[data-v-8d750454] {\n  height: 100%;\n  width: 50px;\n  position: absolute;\n  top: 0;\n  right: 0;\n  background-image: linear-gradient(to right, transparent, white);\n}", ""]);
 
 // exports
 
@@ -6478,6 +6595,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, ".ms_navbar[data-v-04c66e5c] {\n  position: -webkit-sticky;\n  position: sticky;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ms-box-shadow[data-v-03f95630] {\n  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);\n}\n.ms-hidden[data-v-03f95630] {\n  display: none;\n}\nspan[data-v-03f95630] {\n  border: 1px solid #C9C4BE;\n  color: #717171;\n  width: 80px;\n  height: 44px;\n  gap: 15px;\n  cursor: pointer;\n}\nspan .fa-bars[data-v-03f95630] {\n  font-size: 16px;\n  position: relative;\n  z-index: -1;\n}\nspan .fa-circle-user[data-v-03f95630] {\n  font-size: 30px;\n  position: relative;\n  z-index: -1;\n}\nspan[data-v-03f95630]:hover {\n  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);\n}\n#hidden-menu[data-v-03f95630] {\n  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);\n  width: 200px;\n  border-radius: 10px;\n  position: fixed;\n  top: 75px;\n  background-color: white;\n}\n#hidden-menu a[data-v-03f95630] {\n  padding-left: 20px;\n}\n#hidden-menu span[data-v-03f95630] {\n  border: 0;\n  border-bottom: 1px solid #C9C4BE;\n  height: 0px;\n  width: 100%;\n  margin: 6px 0px;\n  cursor: default;\n}\n#hidden-menu span[data-v-03f95630]:hover {\n  box-shadow: none;\n}\n#hidden-menu a[data-v-03f95630]:first-child {\n  font-weight: bold;\n}\na[data-v-03f95630] {\n  text-decoration: none;\n  color: #717171;\n}\na[data-v-03f95630]:hover {\n  background-color: rgb(243, 243, 243);\n}", ""]);
 
 // exports
 
@@ -37757,6 +37893,36 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/messagesComponent.vue?vue&type=style&index=0&id=8d750454&lang=scss&scoped=true&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/messagesComponent.vue?vue&type=style&index=0&id=8d750454&lang=scss&scoped=true& ***!
@@ -37810,6 +37976,36 @@ options.transform = transform
 options.insertInto = undefined;
 
 var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -38491,6 +38687,50 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loggednavbarComponent.vue?vue&type=template&id=33f1aa50&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/loggednavbarComponent.vue?vue&type=template&id=33f1aa50&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "container-fluid border-top border-bottom ms_navbar" },
+    [
+      _c(
+        "div",
+        {
+          staticClass:
+            "d-flex justify-content-between align-items-center container py-4 gapx-1",
+        },
+        [
+          _c("logo-component"),
+          _vm._v(" "),
+          _c("searchbar-component"),
+          _vm._v(" "),
+          _c("loggedpill-component"),
+        ],
+        1
+      ),
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/messagesComponent.vue?vue&type=template&id=8d750454&scoped=true&":
 /*!********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/messagesComponent.vue?vue&type=template&id=8d750454&scoped=true& ***!
@@ -38580,6 +38820,96 @@ var render = function () {
   )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=template&id=03f95630&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=template&id=03f95630&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "d-flex flex-column align-items-end" }, [
+    _c(
+      "div",
+      {
+        on: {
+          click: function ($event) {
+            return _vm.showMenu()
+          },
+        },
+      },
+      [_vm._m(0)]
+    ),
+    _vm._v(" "),
+    _vm._m(1),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass:
+          "badge rounded-pill text-bg-light d-flex justify-content-end align-items-center",
+        attrs: { id: "msPill" },
+      },
+      [
+        _c("i", { staticClass: "fa-solid fa-bars" }),
+        _vm._v(" "),
+        _c("i", { staticClass: "fa-solid fa-circle-user" }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "ms-hidden py-3", attrs: { id: "hidden-menu" } },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "d-flex justify-content-start flex-column align-items-evenly ms-link",
+          },
+          [
+            _c("a", { staticClass: "ms-link", attrs: { href: "" } }, [
+              _vm._v("\n                I miei appartamenti\n            "),
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "ms-link", attrs: { href: "" } }, [
+              _vm._v("\n                Aggiungi appartamento\n            "),
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "ms-link" }),
+            _vm._v(" "),
+            _c("a", { staticClass: "ms-link", attrs: { href: "" } }, [
+              _vm._v("\n                Esci\n            "),
+            ]),
+          ]
+        ),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
@@ -51003,6 +51333,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.component('navbar-component', __webpack_require__(/*! ./components/navbarComponent.vue */ "./resources/js/components/navbarComponent.vue")["default"]);
 Vue.component('messages-component', __webpack_require__(/*! ./components/messagesComponent.vue */ "./resources/js/components/messagesComponent.vue")["default"]);
+Vue.component('loggednavbar-component', __webpack_require__(/*! ./components/loggednavbarComponent.vue */ "./resources/js/components/loggednavbarComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -51057,6 +51388,93 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/loggednavbarComponent.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/loggednavbarComponent.vue ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _loggednavbarComponent_vue_vue_type_template_id_33f1aa50_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loggednavbarComponent.vue?vue&type=template&id=33f1aa50&scoped=true& */ "./resources/js/components/loggednavbarComponent.vue?vue&type=template&id=33f1aa50&scoped=true&");
+/* harmony import */ var _loggednavbarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loggednavbarComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/loggednavbarComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _loggednavbarComponent_vue_vue_type_style_index_0_id_33f1aa50_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true& */ "./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _loggednavbarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _loggednavbarComponent_vue_vue_type_template_id_33f1aa50_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _loggednavbarComponent_vue_vue_type_template_id_33f1aa50_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "33f1aa50",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/loggednavbarComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/loggednavbarComponent.vue?vue&type=script&lang=js&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/loggednavbarComponent.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./loggednavbarComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loggednavbarComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true& ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_style_index_0_id_33f1aa50_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loggednavbarComponent.vue?vue&type=style&index=0&id=33f1aa50&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_style_index_0_id_33f1aa50_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_style_index_0_id_33f1aa50_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_style_index_0_id_33f1aa50_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_style_index_0_id_33f1aa50_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/loggednavbarComponent.vue?vue&type=template&id=33f1aa50&scoped=true&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/loggednavbarComponent.vue?vue&type=template&id=33f1aa50&scoped=true& ***!
+  \******************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_template_id_33f1aa50_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./loggednavbarComponent.vue?vue&type=template&id=33f1aa50&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/loggednavbarComponent.vue?vue&type=template&id=33f1aa50&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_template_id_33f1aa50_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_loggednavbarComponent_vue_vue_type_template_id_33f1aa50_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -51229,6 +51647,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_navbarComponent_vue_vue_type_template_id_04c66e5c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_navbarComponent_vue_vue_type_template_id_04c66e5c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/partials/LoggedpillComponent.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/partials/LoggedpillComponent.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _LoggedpillComponent_vue_vue_type_template_id_03f95630_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LoggedpillComponent.vue?vue&type=template&id=03f95630&scoped=true& */ "./resources/js/components/partials/LoggedpillComponent.vue?vue&type=template&id=03f95630&scoped=true&");
+/* harmony import */ var _LoggedpillComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoggedpillComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/partials/LoggedpillComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _LoggedpillComponent_vue_vue_type_style_index_0_id_03f95630_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true& */ "./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _LoggedpillComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LoggedpillComponent_vue_vue_type_template_id_03f95630_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LoggedpillComponent_vue_vue_type_template_id_03f95630_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "03f95630",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/partials/LoggedpillComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/partials/LoggedpillComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/partials/LoggedpillComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./LoggedpillComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true&":
+/*!****************************************************************************************************************************!*\
+  !*** ./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_style_index_0_id_03f95630_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=style&index=0&id=03f95630&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_style_index_0_id_03f95630_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_style_index_0_id_03f95630_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_style_index_0_id_03f95630_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_style_index_0_id_03f95630_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/partials/LoggedpillComponent.vue?vue&type=template&id=03f95630&scoped=true&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/partials/LoggedpillComponent.vue?vue&type=template&id=03f95630&scoped=true& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_template_id_03f95630_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./LoggedpillComponent.vue?vue&type=template&id=03f95630&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/partials/LoggedpillComponent.vue?vue&type=template&id=03f95630&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_template_id_03f95630_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LoggedpillComponent_vue_vue_type_template_id_03f95630_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
