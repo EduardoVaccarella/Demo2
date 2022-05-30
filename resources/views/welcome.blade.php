@@ -5,10 +5,10 @@
 @endsection
 
 @section('main')
-    {{-- <messages-component></messages-component> --}}
+    <messages-component></messages-component>
 @endsection
 
 @section('footer')
     {{-- <loggednavbar-component></loggednavbar-component> --}}
-    <addbutton-component></addbutton-component>
+    {{-- <addbutton-component></addbutton-component> --}}
 @endsection

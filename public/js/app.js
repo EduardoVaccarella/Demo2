@@ -1962,6 +1962,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6601,7 +6607,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ms-active-height[data-v-8d750454] {\n  height: auto !important;\n}\n[data-v-8d750454]::-webkit-scrollbar {\n  width: 10px;\n}\n[data-v-8d750454]::-webkit-scrollbar-track {\n  background: #f1f1f1;\n}\n[data-v-8d750454]::-webkit-scrollbar-thumb {\n  background: #C9C4BE;\n}\n.ms-messages[data-v-8d750454] {\n  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);\n  border-radius: 10px;\n  position: fixed;\n  top: 75px;\n  background-color: white;\n  width: 75%;\n  height: 500px;\n  overflow-y: scroll;\n  margin: 0 auto;\n}\n.ms-messages h3[data-v-8d750454], .ms-messages p[data-v-8d750454] {\n  border-bottom: 1px solid #C9C4BE;\n  padding-bottom: 5px;\n  margin: 6px 0px;\n}\n.ms-messages h3[data-v-8d750454] {\n  display: inline-block;\n}\n.ms-messages h4[data-v-8d750454] {\n  margin: 0;\n  margin-top: 6px;\n  cursor: pointer;\n}\n.ms-messages p[data-v-8d750454] {\n  margin: 0;\n  height: 30px;\n  overflow: hidden;\n  position: relative;\n  cursor: pointer;\n}\n.ms-messages p #ms-gradient[data-v-8d750454] {\n  height: 100%;\n  width: 50px;\n  position: absolute;\n  top: 0;\n  right: 0;\n  background-image: linear-gradient(to right, transparent, white);\n}", ""]);
+exports.push([module.i, ".ms-active-height[data-v-8d750454] {\n  height: auto !important;\n}\n[data-v-8d750454]::-webkit-scrollbar {\n  width: 10px;\n}\n[data-v-8d750454]::-webkit-scrollbar-track {\n  background: #f1f1f1;\n}\n[data-v-8d750454]::-webkit-scrollbar-thumb {\n  background: #C9C4BE;\n}\n.ms-messages[data-v-8d750454] {\n  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);\n  border-radius: 10px;\n  position: fixed;\n  top: 75px;\n  background-color: white;\n  height: 500px;\n  overflow-y: scroll;\n  margin: 0 auto;\n}\n.ms-messages h3[data-v-8d750454], .ms-messages p[data-v-8d750454] {\n  border-bottom: 1px solid #C9C4BE;\n  padding-bottom: 5px;\n  margin: 6px 0px;\n}\n.ms-messages h3[data-v-8d750454] {\n  display: inline-block;\n}\n.ms-messages h5[data-v-8d750454] {\n  margin: 0;\n  margin-top: 6px;\n  display: inline-block;\n}\n.ms-messages span[data-v-8d750454] {\n  color: #C9C4BE;\n  font-size: smaller;\n}\n.ms-messages p[data-v-8d750454] {\n  margin: 0;\n  height: 25px;\n  overflow: hidden;\n  position: relative;\n  font-size: 14px;\n  cursor: pointer;\n}\n.ms-messages p #ms-gradient[data-v-8d750454] {\n  height: 100%;\n  width: 50px;\n  position: absolute;\n  top: 0;\n  right: 0;\n  background-image: linear-gradient(to right, transparent, white);\n}", ""]);
 
 // exports
 
@@ -38823,13 +38829,19 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "ms-messages p-4" },
+    { staticClass: "ms-messages p-4 m-4" },
     [
       _c("h3", [_vm._v("\n        Messages\n    ")]),
       _vm._v(" "),
       _vm._l(_vm.arrayProva, function (element) {
         return _c("div", { key: element.id }, [
-          _c("h4", [_vm._v("\n            Message from Eric\n        ")]),
+          _c("h5", [_vm._v("\n            Message from Eric\n        ")]),
+          _vm._v(" "),
+          _c("span", { staticClass: "d-none d-sm-inline ml-1" }, [
+            _vm._v("\n            sent at \n        "),
+          ]),
+          _vm._v(" "),
+          _c("span", [_vm._v("\n           30/05/2022\n        ")]),
           _vm._v(" "),
           _vm._m(0, true),
         ])

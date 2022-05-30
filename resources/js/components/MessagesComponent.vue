@@ -1,12 +1,18 @@
 <template>
-    <div class="ms-messages p-4">
+    <div class="ms-messages p-4 m-4">
         <h3>
             Messages
         </h3>
         <div v-for="element in arrayProva" :key="element.id">
-            <h4>
+            <h5>
                 Message from Eric
-            </h4>
+            </h5>
+            <span class="d-none d-sm-inline ml-1">
+                sent at 
+            </span>
+            <span>
+               30/05/2022
+            </span>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, dolores debitis! Delectus quia sit, quos accusamus, repudiandae recusandae facere natus consequatur harum sed tempora? Dolor, accusamus? In vel corporis quo recusandae cum nemo quam soluta, quisquam provident adipisci nobis culpa veniam rem quibusdam asperiores nesciunt possimus repellendus aliquam facilis totam dolorum dicta consequuntur? Nulla, fuga est. Repellendus, itaque sequi autem minus et voluptas earum assumenda doloribus consectetur magnam aperiam eaque eius dolores aut animi dicta optio soluta corrupti repellat cupiditate nisi molestias fuga repudiandae obcaecati? Voluptas, quo quidem deleniti praesentium aspernatur voluptates sunt quis enim, id fuga adipisci laboriosam tempore ad explicabo ex minus numquam. Cumque quas ducimus, iusto, aut perferendis soluta natus ipsa porro corrupti ipsum suscipit similique perspiciatis nobis! Qui at natus impedit, laudantium asperiores eaque vel error voluptate. Perspiciatis aspernatur laboriosam explicabo alias repellat dolor omnis. Inventore et reiciendis similique laboriosam aliquid recusandae, consectetur quo iusto, vitae voluptate ea. Cupiditate officiis harum a repudiandae explicabo, nulla iure, et voluptates fuga laboriosam nam? Quisquam, quo vel? Distinctio aliquid quam quasi cupiditate temporibus reprehenderit repellat quidem doloremque sapiente aut. Quis dolorum cum quam quos adipisci unde magnam veniam dignissimos accusamus facilis impedit quo aspernatur fugit, magni atque error alias corporis eum explicabo assumenda totam quod! Distinctio id a ipsum optio sequi dolorem voluptate tenetur cum, nam dolore unde quas veniam quo non, aliquid adipisci corrupti! Laboriosam, repudiandae ipsa. Facere voluptatibus placeat consectetur eveniet vero est, ipsa commodi adipisci nemo at quidem veniam excepturi quam quae? Ipsam repudiandae esse vel?
                 <span id="ms-gradient">
@@ -60,7 +66,6 @@
     position: fixed;
     top: 75px;
     background-color: white;
-    width: 75%;
     height: 500px;
     overflow-y: scroll;
     margin: 0 auto;
@@ -75,17 +80,23 @@
         display: inline-block;
     }
 
-    h4 {
+    h5 {
         margin: 0;
         margin-top: 6px;
-        cursor: pointer;
+        display: inline-block;
+    }
+
+    span {
+        color: #C9C4BE;
+        font-size: smaller;
     }
 
     p {
         margin: 0;
-        height: 30px;
+        height: 25px;
         overflow: hidden;
         position: relative;
+        font-size: 14px;
         cursor: pointer;
 
         #ms-gradient {
